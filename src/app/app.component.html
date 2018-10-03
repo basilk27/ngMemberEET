@@ -5,7 +5,7 @@
         <span>Membership EET</span>
       </div>
       <span class="fill-space"></span>
-      <div *ngIf="loginFlag">
+      <div *ngIf="zManuState.loginButtonOn">
         <span>
             <a mat-raised-button routerLink='/login'
                class='mat-button'
@@ -14,7 +14,7 @@
       </div>
     </mat-toolbar>
   </div>
-  <div *ngIf='mainManuFlag'>
+  <div *ngIf='zManuState.mainManuFlag'>
     <mat-toolbar color="accent">
       <a mat-mat-raised-button  routerLink="/main" class='mat-button'>EET Main</a>
       <a mat-mat-raised-button  routerLink="/cadocs" class='mat-button'>View CA-Doc</a>

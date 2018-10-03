@@ -7,6 +7,8 @@ import { FormBuilder,
 import { LoginService } from '../service/login/login.service';
 import { Login } from '../model/login';
 import { LoginStatus } from '../model/login-status';
+import { MeanuStateService } from '../service/state/meanu-state.service';
+import { ManuState } from '../model/manu-state';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +24,8 @@ export class LoginComponent implements OnInit {
 
   constructor( private router: Router,
                private loginService: LoginService,
-               private formBuilder: FormBuilder ) {
+               private formBuilder: FormBuilder,
+               private meanuService: MeanuStateService) {
     this.displayManu = false;
     this.invalidAuth = false;
   }
@@ -71,9 +74,25 @@ export class LoginComponent implements OnInit {
       .subscribe( (res: LoginStatus) => { this.loginStatus = res; },
         ( err: LoginStatus ) => { this.loginStatus = err; } );
 
-    if ( this.loginStatus.loginFlag === false ) {
-      return;
-    }
+//
+//    console.log('into onSubmit 44444');
+//    if ( this.loginStatus.loginFlag === false ) {
+//      return;
+//    }
+
+    console.log('into onSubmit 555555');
+    const currentManuState: ManuState = {
+      loginButtonOn: false,
+      mainManuFlag: true,
+      mainButtonOn: false,
+      cadocsButtonOn: true,
+      searchButtonOn: true,
+      eeterrorsButtonOn: true,
+      scheduleButtonOn: true,
+      mappingButtonOn: true
+    };
+
+    this.meanuService.manuCriteria = currentManuState;
 
     this.router.navigate(['main']);
   }
