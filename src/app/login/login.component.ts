@@ -24,8 +24,7 @@ export class LoginComponent implements OnInit {
 
   constructor( private router: Router,
                private loginService: LoginService,
-               private formBuilder: FormBuilder,
-               private meanuService: MeanuStateService) {
+               private formBuilder: FormBuilder) {
     this.displayManu = false;
     this.invalidAuth = false;
   }
@@ -79,20 +78,6 @@ export class LoginComponent implements OnInit {
 //    if ( this.loginStatus.loginFlag === false ) {
 //      return;
 //    }
-
-    console.log('into onSubmit 555555');
-    const currentManuState: ManuState = {
-      loginButtonOn: false,
-      mainManuFlag: true,
-      mainButtonOn: false,
-      cadocsButtonOn: true,
-      searchButtonOn: true,
-      eeterrorsButtonOn: true,
-      scheduleButtonOn: true,
-      mappingButtonOn: true
-    };
-
-    this.meanuService.manuCriteria = currentManuState;
 
     this.router.navigate(['main']);
   }

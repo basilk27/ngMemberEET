@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTabGroup } from '@angular/material';
+import { ManuState } from '../model/manu-state';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-eet-main',
@@ -7,9 +10,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EetMainComponent implements OnInit {
 
-  constructor() { }
+  zManuState: ManuState;
+
+  constructor( private _router: Router ) {
+    this.zManuState =  {
+      mainManuFlag: true,
+      mainButtonOn: false,
+      cadocsButtonOn: true,
+      searchButtonOn: true,
+      eeterrorsButtonOn: true,
+      scheduleButtonOn: true,
+      mappingButtonOn: true
+    };
+  }
 
   ngOnInit() {
   }
 
+  mainRouter(): void {
+    this._router.navigate(['/main']);
+  }
+
+  cadocsRouter(): void {
+    this._router.navigate(['/cadocs']);
+  }
+
+  searchRouter(): void {
+    this._router.navigate( [ '/search' ] );
+  }
+
+  eeterrorsRouter(): void {
+    this._router.navigate( [ '/search' ] );
+  }
+
+  scheduleRouter(): void {
+    this._router.navigate( [ '/schedule' ] );
+  }
+
+  mappingRouter(): void {
+    this._router.navigate(['/mapping']);
+  }
 }

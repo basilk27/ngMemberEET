@@ -11,7 +11,7 @@ export class MeanuStateService {
 
   constructor() {
     const currentManuState: ManuState = {
-      loginButtonOn: true,
+//      loginButtonOn: true,
       mainManuFlag: false,
       mainButtonOn: false,
       cadocsButtonOn: false,

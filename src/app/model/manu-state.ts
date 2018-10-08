@@ -1,5 +1,5 @@
 export interface ManuState {
-  loginButtonOn: boolean;
+//  loginButtonOn: boolean;
   mainManuFlag: boolean;
   mainButtonOn: boolean;
   cadocsButtonOn: boolean;

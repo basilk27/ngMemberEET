@@ -13,4 +13,20 @@ body {
   height: 100%;
 }
 
+.member-card {
+  position: absolute;
+  width: calc(100% - 0px);
+  min-height: 100% !important;
+}
 
+.member-card-2 {
+  width: calc(100% - 0px);
+  height: calc(100% - 0px);
+}
+
+
+.member-card-1 {
+  width: 100%;
+  height: 100%;
+  margin: 0% auto;
+}

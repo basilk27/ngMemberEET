@@ -1,11 +1,45 @@
+<div *ngIf='zManuState.mainManuFlag'>
+  <mat-toolbar color="accent">
+    <div *ngIf='zManuState.mainButtonOn'>
+      <a mat-mat-raised-button  (click)="mainRouter()" class='mat-button'>EET Main</a>
+    </div>
+    <div *ngIf='zManuState.cadocsButtonOn'>
+      <a mat-mat-raised-button  (click)="cadocsRouter()" class='mat-button'>View CA-Doc</a>
+    </div>
+    <div *ngIf='zManuState.searchButtonOn'>
+      <a mat-mat-raised-button  (click)="searchRouter()" class='mat-button'>Search Status</a>
+    </div>
+    <div *ngIf='zManuState.eeterrorsButtonOn'>
+      <a mat-mat-raised-button  (click)="eeterrorsRouter()" class='mat-button'>EET Errors</a>
+    </div>
+    <div *ngIf='zManuState.scheduleButtonOn'>
+    <a mat-mat-raised-button  (click)="scheduleRouter()" class='mat-button'>Job Schedule</a>
+    </div>
+    <div *ngIf='zManuState.mappingButtonOn'>
+      <a mat-mat-raised-button  (click)="mappingRouter()" class='mat-button'>Group Mapping</a>
+    </div>
+  </mat-toolbar>
+</div>
 <!-- <div fxLayout="column" fxLayoutAlign="center stretch" fxFill> -->
-<div>
+<!-- bmk hold
+<div fxLayout="row" fxLayoutAlign="center center">
+-->
+<div fxLayout="column" fxFlexAlign="stretch">
   <mat-card>
-    <mat-card-header>
-      <mat-card-title class="mat-display-2">EET Main</mat-card-title>
-    </mat-card-header>
+    <mat-card-subtitle>
+    <!--  <mat-card-title class="mat-display-2">  -->
+        <span><p>Welcome to the Electronic Eligibility Transfer (EET) options menu.<br>
+          EET is an application that allows authorized users to manage membership eligibility via a browser interface.<br>
+          From this menu, users can perform the following tasks based on access privileges.</p></span>
+    <!--  </mat-card-title>  -->
+    </mat-card-subtitle>
     <mat-card-content>
-      <p>EET Main display info.</p>
+        <mat-tab-group>
+          <mat-tab label="Create Employer EET Profile">Create Employer EET Profile info</mat-tab>
+          <mat-tab label="Update Employer EET Profile">Update Employer EET Profile info</mat-tab>
+          <mat-tab label="View Employer EET Profile">View Employer EET Profile info</mat-tab>
+          <mat-tab label="Update Employer EET Contacts">Update Employer EET Contacts info</mat-tab>
+        </mat-tab-group>
     </mat-card-content>
   </mat-card>
 </div>
