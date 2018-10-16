@@ -1,3 +1,4 @@
+<mat-card class="eet-main-card">
 <div *ngIf='zManuState.mainManuFlag'>
   <mat-toolbar color="accent">
     <div *ngIf='zManuState.mainButtonOn'>
@@ -27,19 +28,27 @@
 <div fxLayout="column" fxFlexAlign="stretch">
   <mat-card>
     <mat-card-subtitle>
-    <!--  <mat-card-title class="mat-display-2">  -->
         <span><p>Welcome to the Electronic Eligibility Transfer (EET) options menu.<br>
           EET is an application that allows authorized users to manage membership eligibility via a browser interface.<br>
-          From this menu, users can perform the following tasks based on access privileges.</p></span>
-    <!--  </mat-card-title>  -->
+          From this menu, users can perform the following tasks based on access privileges.</p>
+        </span>
     </mat-card-subtitle>
     <mat-card-content>
         <mat-tab-group>
-          <mat-tab label="Create Employer EET Profile">Create Employer EET Profile info</mat-tab>
-          <mat-tab label="Update Employer EET Profile">Update Employer EET Profile info</mat-tab>
-          <mat-tab label="View Employer EET Profile">View Employer EET Profile info</mat-tab>
-          <mat-tab label="Update Employer EET Contacts">Update Employer EET Contacts info</mat-tab>
+          <mat-tab label="Create Employer EET Profile">
+            <app-create-employer-profile></app-create-employer-profile>
+          </mat-tab>
+          <mat-tab label="Update Employer EET Profile">
+            <app-update-employer-profile></app-update-employer-profile>
+          </mat-tab>
+          <mat-tab label="View Employer EET Profile">
+            <app-view-employer-profile></app-view-employer-profile>
+          </mat-tab>
+          <mat-tab label="Update Employer EET Contacts">
+            <app-update-employer-contacts></app-update-employer-contacts>
+          </mat-tab>
         </mat-tab-group>
     </mat-card-content>
   </mat-card>
 </div>
+</mat-card>

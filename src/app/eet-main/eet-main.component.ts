@@ -40,7 +40,7 @@ export class EetMainComponent implements OnInit {
   }
 
   eeterrorsRouter(): void {
-    this._router.navigate( [ '/search' ] );
+    this._router.navigate( [ '/eeterrors' ] );
   }
 
   scheduleRouter(): void {

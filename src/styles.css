@@ -30,3 +30,24 @@ body {
   height: 100%;
   margin: 0% auto;
 }
+
+/* comments */
+
+.tab-emp-profile-card {
+  width: 900px;
+  margin-top: 5%;
+  margin-left: 20%;
+}
+
+.tab-emp-profile-form {
+  min-width: 160px;
+  max-width: 500px;
+  width: 100%;
+  margin-left: 25%;
+}
+
+tab-emp-profile-full-width {
+  width: 60%;
+}
+
+

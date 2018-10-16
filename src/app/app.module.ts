@@ -16,6 +16,14 @@ import { EetErrorsComponent } from './eet-errors/eet-errors.component';
 import { JobScheduleComponent } from './job-schedule/job-schedule.component';
 import { GroupMappingComponent } from './group-mapping/group-mapping.component';
 import { HomeComponent } from './home/home.component';
+import { CreateEmployerProfileComponent } from './create-employer-profile/create-employer-profile.component';
+import { UpdateEmployerProfileComponent } from './update-employer-profile/update-employer-profile.component';
+import { ViewEmployerProfileComponent } from './view-employer-profile/view-employer-profile.component';
+import { UpdateEmployerContactsComponent } from './update-employer-contacts/update-employer-contacts.component';
+import { ViewErrorMessageComponent } from './view-error-message/view-error-message.component';
+import { JobScheduleOptionComponent } from './job-schedule-option/job-schedule-option.component';
+import { GroupMappingOptionComponent } from './group-mapping-option/group-mapping-option.component';
+import { SearchStatusOptionComponent } from './search-status-option/search-status-option.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +36,15 @@ import { HomeComponent } from './home/home.component';
     EetErrorsComponent,
     JobScheduleComponent,
     GroupMappingComponent,
-    HomeComponent
+    HomeComponent,
+    CreateEmployerProfileComponent,
+    UpdateEmployerProfileComponent,
+    ViewEmployerProfileComponent,
+    UpdateEmployerContactsComponent,
+    ViewErrorMessageComponent,
+    JobScheduleOptionComponent,
+    GroupMappingOptionComponent,
+    SearchStatusOptionComponent
   ],
   imports: [
     BrowserModule,

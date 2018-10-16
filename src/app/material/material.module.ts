@@ -10,7 +10,9 @@ import {
   MatInputModule,
   MatTableModule,
   MatMenuModule,
-  MatDialogModule, MatTabsModule
+  MatDialogModule,
+  MatTabsModule,
+  MatSelectModule
 } from '@angular/material';
 
 @NgModule({
@@ -27,6 +29,7 @@ import {
     MatMenuModule,
     FlexLayoutModule,
     MatTabsModule,
+    MatSelectModule
   ],
   exports: [
     CommonModule,
@@ -40,7 +43,8 @@ import {
     MatTableModule,
     MatMenuModule,
     FlexLayoutModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSelectModule
   ],
   declarations: []
 })
